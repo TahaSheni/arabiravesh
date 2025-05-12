@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بازی افعال</title>
+    <link rel="stylesheet" href="./css/game.css" />
+  </head>
+  <body>
+    <div class="gradient"></div>
+    <div class="box">
+      <!-- موسیقی پس‌زمینه -->
+      <audio
+        class="music-player"
+        src="./media/Raphael Novarina 11.mp3"
+        id="bg-music"
+        loop
+      ></audio>
+
+      <!-- دکمه شروع -->
+      <button id="start-button" class="start-button">شروع بازی</button>
+
+      <!-- صفحه اصلی بازی -->
+      <div class="game-screen hidden" id="game-screen">
+        <div class="header">
+          <span class="timer">
+            <p>زمان :</p>
+            <p id="game-timer">30</p>
+            <p>ثانیه</p>
+          </span>
+          <span class="score">
+            <p>امتیاز :</p>
+            <p id="game-score">0</p>
+          </span>
+        </div>
+        <div class="game-content" id="game-content">
+          <p id="question" class="question-text"></p>
+          <div id="options-container" class="options-container"></div>
+        </div>
+      </div>
+
+      <!-- فرم پایان بازی -->
+      <div id="end-game-form" class="end-game-overlay hidden">
+        <div class="end-game-container">
+          <h3>بازی تمام شد!</h3>
+          <p class="final-score">امتیاز شما: <span id="final-score">0</span></p>
+          <form id="player-info-form">
+            <input
+              type="text"
+              placeholder="نام شما"
+              required
+              id="player-name"
+              class="input-field"
+            />
+            <input
+              type="text"
+              placeholder="نام مدرسه"
+              required
+              id="player-school"
+              class="input-field"
+            />
+            <input
+              type="text"
+              placeholder="کلاس"
+              required
+              id="player-class"
+              class="input-field"
+            />
+            <button type="submit" class="return-btn">ذخیره و بازگشت</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./js/game.js"></script>
+  </body>
+</html>

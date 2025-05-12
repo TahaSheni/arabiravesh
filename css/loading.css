@@ -1,0 +1,120 @@
+/* استایل‌های صفحه لودینگ */
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 40%;
+  height: 80vh;
+  border-radius: 35px;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.164);
+  position: absolute;
+  right: 30%;
+  top: 10%;
+}
+
+.quote-container {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  max-width: 600px;
+}
+
+.arabic-text {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-family: 'Amiri', serif;
+}
+
+.persian-text {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+
+.source-text {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+/* انیمیشن لودینگ */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #3498db;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+:root {
+    --overlay-color-1: rgb(167, 190, 255);
+    --overlay-color-2: rgb(0, 183, 255);
+    --overlay-color-3: rgba(101, 182, 214, 1);
+    --anim-duration: 2s;
+  }
+  
+  .gradient {
+    opacity: 0.8;
+    background: none;
+  }
+  
+  .gradient:after,
+  .gradient:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .gradient:before {
+    background: linear-gradient(
+      135deg,
+      var(--overlay-color-2) 0%,
+      var(--overlay-color-1) 100%
+    );
+    animation: OpacityAnim var(--anim-duration) ease-in-out 0s infinite alternate;
+  }
+  
+  .gradient:after {
+    background: linear-gradient(
+      135deg,
+      var(--overlay-color-1) 0%,
+      var(--overlay-color-2) 100%
+    );
+    animation: OpacityAnim var(--anim-duration) ease-in-out
+      calc(-1 * var(--anim-duration)) infinite alternate;
+  }
+  
+  @keyframes OpacityAnim {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  

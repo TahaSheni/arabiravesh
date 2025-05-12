@@ -1,0 +1,690 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes circle-size-move {
+  0% {
+    width: 250px;
+    height: 250px;
+    bottom: 100px;
+    right: 10%;
+  }
+  10% {
+    width: 260px;
+    height: 260px;
+    bottom: 100px;
+    right: 10%;
+  }
+  20% {
+    width: 270px;
+    height: 270px;
+    bottom: 100px;
+    right: 10%;
+  }
+  30% {
+    width: 280px;
+    height: 280px;
+    bottom: 100px;
+    right: 10%;
+  }
+  40% {
+    width: 290px;
+    height: 290px;
+    bottom: 100px;
+    right: 10%;
+  }
+  50% {
+    width: 300px;
+    height: 300px;
+    bottom: 100px;
+    right: 10%;
+  }
+  60% {
+    width: 290px;
+    height: 290px;
+    bottom: 100px;
+    right: 10%;
+  }
+  70% {
+    width: 280px;
+    height: 280px;
+    bottom: 100px;
+    right: 10%;
+  }
+  80% {
+    width: 270px;
+    height: 270px;
+    bottom: 100px;
+    right: 10%;
+  }
+  90% {
+    width: 260px;
+    height: 260px;
+    bottom: 100px;
+    right: 10%;
+  }
+  100% {
+    width: 250px;
+    height: 250px;
+    bottom: 100px;
+    right: 10%;
+  }
+}
+
+@keyframes rainbow-text {
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  16% {
+    color: rgb(255, 255, 0);
+  }
+  32% {
+    color: rgb(0, 255, 0);
+  }
+  48% {
+    color: rgb(0, 255, 255);
+  }
+  64% {
+    color: rgb(0, 0, 255);
+  }
+  80% {
+    color: rgb(255, 0, 255);
+  }
+  100% {
+    color: rgb(255, 0, 0);
+  }
+}
+
+body {
+  background-color: #65b6d6;
+  background-image: linear-gradient(
+    301deg,
+    rgba(101, 182, 214, 1) 0%,
+    rgba(65, 148, 181, 1) 50%,
+    rgba(42, 123, 155, 1) 100%
+  );
+  overflow: hidden;
+}
+
+.bg-animation-circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: rgba(165, 255, 235, 0.562);
+  animation: circle-size-move 60s infinite linear;
+  position: absolute;
+  transition: 60s linear;
+}
+
+.box {
+  width: 40%;
+  height: 100vh;
+  background-color: white;
+  right: 30%;
+  top: 0;
+  position: absolute;
+  border-radius: 35px;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.164);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rainbow-text {
+  animation: rainbow-text 10s infinite linear;
+  font-family: iryekan;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  user-select: none;
+}
+
+/* محتوای اصلی */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+/* کانتینر لینک‌های بازی */
+.game-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 25px;
+  margin-top: auto;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+/* استایل دکمه‌های بازی (یکسان برای همه دکمه‌ها) */
+.game-button-link {
+  display: block;
+  width: 80%;
+  text-decoration: none;
+}
+
+.game-button {
+  width: 100%;
+  height: 65px;
+  background-color: rgb(0, 132, 255);
+  background-image: linear-gradient(
+    90deg,
+    rgba(24, 140, 186, 1) 0%,
+    rgba(130, 207, 237, 1) 50%,
+    rgba(24, 140, 186, 1) 100%
+  );
+  border-radius: 15px;
+  position: relative;
+  text-align: center;
+  font-family: lalezar;
+  font-size: 26px;
+  padding-top: 13px;
+  color: rgb(127, 255, 255);
+  user-select: none;
+  direction: rtl;
+  transition: 0.3s;
+  background-size: 300%;
+}
+
+.game-button:hover {
+  background-color: rgb(0, 174, 255);
+  background-position: 627px 627px;
+  width: 100%;
+  height: 70px;
+  border-radius: 18px;
+  font-size: 28px;
+  padding-top: 15px;
+  color: aquamarine;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.295);
+}
+
+.coming-soon, .afal-game, .leader-board {
+  width: 80%;
+  height: 65px;
+  background-color: rgb(0, 132, 255);
+  background-image: linear-gradient(
+    90deg,
+    rgba(24, 140, 186, 1) 0%,
+    rgba(130, 207, 237, 1) 50%,
+    rgba(24, 140, 186, 1) 100%
+  );
+  border-radius: 15px;
+  margin-top: 0;
+  position: relative;
+  text-align: center;
+  font-family: lalezar;
+  font-size: 26px;
+  padding-top: 13px;
+  color: rgb(127, 255, 255);
+  user-select: none;
+  direction: rtl;
+  transition: 0.3s;
+  background-size: 300%;
+}
+
+.coming-soon:hover, .afal-game:hover, .leader-board:hover {
+  background-color: rgb(0, 174, 255);
+  background-position: 627px 627px;
+  width: 82%;
+  height: 70px;
+  border-radius: 18px;
+  font-size: 28px;
+  padding-top: 15px;
+  color: aquamarine;
+  rotate: 0.0deg;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.295);
+}
+
+.afal-game {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.leader-board {
+  width: 80%;
+  height: 70px;
+  background-color: rgb(0, 132, 255);
+  background-image: linear-gradient(
+    90deg,
+    rgba(24, 140, 186, 1) 0%,
+    rgba(130, 207, 237, 1) 50%,
+    rgba(24, 140, 186, 1) 100%
+  );
+  border-radius: 18px;
+  margin-top: 0;
+  position: relative;
+  text-align: center;
+  font-family: lalezar;
+  font-size: 30px;
+  padding-top: 11.5px;
+  color: rgb(127, 255, 255);
+  user-select: none;
+  direction: rtl;
+  transition: 0.3s;
+  background-size: 300%;
+}
+
+.leader-board:hover {
+  background-color: rgb(0, 174, 255);
+  background-position: 627px 627px;
+  width: 82%;
+  height: 75px;
+  border-radius: 22px;
+  font-size: 32px;
+  padding-top: 12.5px;
+  color: aquamarine;
+  rotate: 0.0deg;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.295);
+}
+
+:root {
+  --overlay-color-1: rgb(167, 190, 255);
+  --overlay-color-2: rgb(0, 183, 255);
+  --overlay-color-3: rgba(101, 182, 214, 1);
+  --anim-duration: 2s;
+}
+
+.gradient {
+  opacity: 0.8;
+  background: none;
+}
+
+.gradient:after,
+.gradient:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.gradient:before {
+  background: linear-gradient(
+    135deg,
+    var(--overlay-color-2) 0%,
+    var(--overlay-color-1) 100%
+  );
+  animation: OpacityAnim var(--anim-duration) ease-in-out 0s infinite alternate;
+}
+
+.gradient:after {
+  background: linear-gradient(
+    135deg,
+    var(--overlay-color-1) 0%,
+    var(--overlay-color-2) 100%
+  );
+  animation: OpacityAnim var(--anim-duration) ease-in-out
+    calc(-1 * var(--anim-duration)) infinite alternate;
+}
+
+@keyframes OpacityAnim {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.music-player {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+#settings-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  padding: 10px 20px;
+  border: none;
+  background-color: #008cff;
+  color: white;
+  font-family: lalezar;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#settings-btn:hover {
+  background-color: rgb(0, 174, 255);
+  color: aquamarine;
+}
+.hidden {
+  display: none;
+}
+
+.settings-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.settings-panel {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #0002;
+  width: 300px;
+  text-align: center;
+  font-family: lalezar;
+  font-size: 20px;
+  margin: 27vh auto;
+  position: relative;
+}
+
+.settings-panel h2 {
+  margin-bottom: 20px;
+}
+
+.settings-panel label {
+  display: block;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.settings-panel button {
+  margin-top: 20px;
+  background: #0084ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.settings-panel button:hover {
+  background-color: #00aaff;
+}
+
+.difficulty {
+  background-color: #008cff;
+  border: none;
+  font-family: lalezar;
+  border-radius: 10px;
+  width: 75px;
+  height: 49px;
+  text-align: center;
+  transition: 0.3s;
+  color: white;
+}
+.difficulty:hover {
+  background-color: #00aaff;
+}
+#close-settings {
+  font-family: lalezar;
+}
+
+/* استایل برای چیدمان ردیفی در تنظیمات */
+.settings-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.difficulty-selection,
+.school-selection {
+  flex: 1;
+  text-align: right;
+}
+
+.difficulty-selection label,
+.school-selection label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: right;
+}
+
+.difficulty-selection select,
+.school-selection select {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #0d47a1;
+  background-color: white;
+  margin-top: 5px;
+  min-width: 150px;
+}
+
+/* بخش بالایی صفحه */
+.top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+/* بخش میانی صفحه */
+.middle-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto 0;
+  padding: 20px 0;
+}
+
+/* استایل انتخاب مدرسه در صفحه اصلی */
+.school-selection-main {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: rgba(240, 248, 255, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.school-selection-main label {
+  display: inline-block;
+  color: #1a237e;
+  font-family: lalezar;
+  font-size: 22px;
+  margin-bottom: 0;
+  margin-left: 10px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.main-school-selector {
+  width: auto;
+  min-width: 150px;
+  padding: 8px 15px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid #0d47a1;
+  background-color: #f5f9ff;
+  color: #333;
+  font-family: lalezar;
+  transition: all 0.3s;
+  text-align: center;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+.main-school-selector option {
+  background-color: #f0f8ff;
+  color: #333;
+  font-family: iryekan;
+}
+
+.main-school-selector:hover {
+  border-color: #1565c0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.main-school-selector:focus {
+  outline: none;
+  border-color: #1a237e;
+  box-shadow: 0 0 8px rgba(26, 35, 126, 0.3);
+}
+
+/* ریسپانسیو برای نمایش‌های کوچکتر */
+@media (max-width: 1200px) {
+  .box {
+    width: 60%;
+    right: 20%;
+  }
+}
+
+@media (max-width: 992px) {
+  .box {
+    width: 70%;
+    right: 15%;
+  }
+
+  .rainbow-text {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 90%;
+    right: 5%;
+  }
+
+  .rainbow-text {
+    font-size: 36px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
+  .middle-section {
+    padding: 10px 0;
+  }
+
+  .school-selection-main {
+    padding: 8px;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .school-selection-main label {
+    font-size: 18px;
+    margin-left: 5px;
+  }
+
+  .main-school-selector {
+    min-width: 120px;
+    padding: 6px 12px;
+    font-size: 16px;
+  }
+
+  .game-button-link {
+    width: 90%;
+  }
+
+  .game-button {
+    font-size: 22px;
+    padding-top: 15px;
+  }
+  
+  .game-button:hover {
+    font-size: 24px;
+  }
+  
+  .game-links {
+    gap: 15px;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .school-selection-main {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .school-selection-main label {
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+  
+  .main-school-selector {
+    min-width: 150px;
+  }
+}
+
+@media (max-height: 700px) {
+  .box {
+    height: 100vh;
+    padding-bottom: 20px;
+  }
+
+  .rainbow-text {
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .top-section {
+    padding-bottom: 5px;
+  }
+
+  .middle-section {
+    padding: 5px 0;
+  }
+
+  .school-selection-main {
+    padding: 5px;
+    gap: 8px;
+  }
+  
+  .school-selection-main label {
+    font-size: 16px;
+  }
+  
+  .main-school-selector {
+    padding: 6px 10px;
+    font-size: 15px;
+    min-width: 100px;
+  }
+  
+  .game-links {
+    gap: 12px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+
+  .game-button {
+    height: 55px;
+    padding-top: 12px;
+    font-size: 22px;
+  }
+  
+  .game-button:hover {
+    height: 60px;
+    padding-top: 13px;
+    font-size: 24px;
+  }
+}

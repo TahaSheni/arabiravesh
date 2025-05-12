@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <!-- تنظیمات متا و عنوان صفحه -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بازی‌های عربی</title>
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- فونت‌های مورد نیاز -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/iran-yekan-font@v1.0.0/dist/font-face.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/b-koodak-font@v1.0.0/dist/font-face.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/lalezar-font@v1.0.0/dist/font-face.css"
+    />
+
+    <!-- استایل‌های اصلی بازی -->
+    <link rel="stylesheet" href="css/game.css" />
+  </head>
+  <body>
+    <!-- پنل تنظیمات بازی -->
+    <div class="settings-overlay hidden" id="settings-overlay">
+      <div class="settings-panel hidden" id="settings-panel">
+        <h2>تنظیمات</h2>
+
+        <!-- تنظیمات موسیقی پس‌زمینه -->
+        <label>
+          <input type="checkbox" id="music-toggle" checked />
+          پخش موسیقی پس‌زمینه
+        </label>
+
+        <button class="close-settings" id="close-settings">بستن</button>
+      </div>
+    </div>
+
+    <!-- پس‌زمینه گرادیانت -->
+    <div class="gradient"></div>
+
+    <!-- باکس اصلی بازی -->
+    <div class="box">
+      <!-- پخش‌کننده موسیقی پس‌زمینه -->
+      <audio
+        class="music-player"
+        src="./media/Raphael Novarina 11.mp3"
+        id="bg-music"
+        loop
+      ></audio>
+
+      <!-- دکمه تنظیمات -->
+      <button id="settings-btn">⚙️ تنظیمات</button>
+
+      <!-- محتوای اصلی -->
+      <div class="main-content">
+        <!-- بخش بالای صفحه -->
+        <div class="top-section">
+          <!-- عنوان بازی -->
+          <p class="rainbow-text">بازی های عربی روش</p>
+        </div>
+
+        <!-- بخش میانی - انتخاب مدرسه -->
+        <div class="middle-section">
+          <!-- انتخاب مدرسه -->
+          <div class="school-selection-main">
+            <label>انتخاب مدرسه</label>
+            <select id="school-selector" class="main-school-selector">
+              <option value="نیک پرور">نیک پرور</option>
+              <option value="علوی">علوی</option>
+              <option value="احسان">احسان</option>
+              <option value="صلحا">صلحا</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- لینک‌های بازی -->
+        <div class="game-links">
+          <a
+            href="loading.html"
+            id="difficulty-hard-link"
+            class="game-button-link"
+            ><div class="game-button">بازی افعال سخت</div></a
+          >
+          <a
+            href="loading.html"
+            id="difficulty-easy-link"
+            class="game-button-link"
+            ><div class="game-button">بازی افعال آسان</div></a
+          >
+          <a href="./leaderboard.html" class="game-button-link"
+            ><div class="game-button">جدول امتیازات</div></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- اسکریپت‌های بازی -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
