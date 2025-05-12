@@ -10,6 +10,20 @@ body {
   font-family: iryekan, sans-serif;
 }
 
+@font-face {
+  font-family: "lalezar";
+  src: url("../fonts/LalezarRegular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "iryekan";
+  src: url("../fonts/IRYekanBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "b koodak";
+  src: url("../fonts/BKOODKBD.TTF") format("truetype");
+}
+
 /* کادر اصلی بازی */
 .box {
   width: 40%;
