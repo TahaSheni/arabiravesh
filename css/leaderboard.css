@@ -15,6 +15,20 @@ body {
     overflow: hidden;
 }
 
+@font-face {
+  font-family: "lalezar";
+  src: url("../fonts/LalezarRegular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "iryekan";
+  src: url("../fonts/IRYekanBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "b koodak";
+  src: url("../fonts/BKOODKBD.TTF") format("truetype");
+}
+
 /* گرادیان پس‌زمینه */
 :root {
     --overlay-color-1: rgb(167, 190, 255);
